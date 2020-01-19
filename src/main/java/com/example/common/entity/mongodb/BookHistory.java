@@ -9,11 +9,15 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Setter
 @Getter
 @Document(collection = "book_his")
-public class BookHistory extends History{
+public class BookHistory extends History {
 
     @Field
     private String sku;
 
     @Field
     private Integer quantity;
+
+    @Field("book_name")
+    private String bookName;
+
 }
